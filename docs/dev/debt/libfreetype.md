@@ -2,6 +2,8 @@
 
 ### Callable exports
 
+- [FT_MulDiv, FT_MulFix, FT_DivFix, FT_RoundFix, FT_CeilFix and FT_FloorFix](../../../core/libs/prx/libfreetype/src/FixedPoint.cpp) (libfreetype) - the 3.20 export table lists these names for this module. They follow FreeType 2.15.0's 64-bit fixed-point path (`ftcalc.c`), and the test checks them against the bundled FreeType library. The console's FreeType version and these prototypes are unverified, and the guest `FT_Long` is taken as 64 bits.
+
 - [Callable exports](../../../core/libs/prx/libfreetype/Export.cpp) - the `FT_Set_Default_Properties` NID appears in a 3.20-labelled `libfreetype` image and a later 13.60-labelled `libSceVshFreeType` image. The images have different module and library identities; matching NIDs do not establish forwarding or equivalent behavior. Neither version label is authenticated. The [verified NID name database](https://github.com/zecoxao/sce_symbols/blob/2883963a0a514ba6e77407a08ef4730a65e88254/aerolib.csv) names this export and the NID matches. The helper follows the bundled FreeType API; the console signature and behavior remain unverified.
 
 - [Older callable NIDs](../../../core/libs/prx/libfreetype/Export.cpp): The [verified NID name database](https://github.com/zecoxao/sce_symbols/blob/2883963a0a514ba6e77407a08ef4730a65e88254/aerolib.csv) names these exports `FTC_Manager_New`, `FT_Error_String`, `FT_Stream_OpenBzip2`, `FT_Stream_OpenGzip` and `FT_Stream_OpenLZW`, and the NID of each name matches. The gzip, LZW and bzip2 stream helpers follow bundled FreeType; the remaining names are throwing import-resolution placeholders. Console signatures and behavior are unverified. No matching NIDs were found in the later module inventory.
