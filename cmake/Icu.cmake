@@ -89,8 +89,7 @@ add_library(icu_common STATIC EXCLUDE_FROM_ALL
     ${ICU_SOURCE_DIR}/common/utrie2.cpp
     ${ICU_SOURCE_DIR}/common/utrie_swap.cpp
     ${ICU_SOURCE_DIR}/common/uvector.cpp
-    ${ICU_SOURCE_DIR}/common/uvectr32.cpp
-    ${ICU_SOURCE_DIR}/stubdata/stubdata.cpp)
+    ${ICU_SOURCE_DIR}/common/uvectr32.cpp)
 target_sources(icu_common PRIVATE
     ${ICU_SOURCE_DIR}/common/fixedstring.cpp
     ${ICU_SOURCE_DIR}/common/localebuilder.cpp
